@@ -43,41 +43,7 @@ class PubSub {
     publish({ channel, message}) {
         this.pubnub.publish({ channel, message });
     }
-    // publish({ channel, message }) {
-    //     // Unsubscribe temporarily to prevent receiving our own message
-    //     this.pubnub.unsubscribe({
-    //         channels: [channel],
-    //         withPresence: false,
-    //     }, () => {
-    //         // Publish the message
-    //         this.pubnub.publish({
-    //             channel,
-    //             message,
-    //         }, () => {
-    //             // Re-subscribe after publishing
-    //             this.pubnub.subscribe({
-    //                 channels: [channel],
-    //                 withPresence: false,
-    //             });
-    //         });
-    //     });
-    // }
-    // publish({ channel, message }) {
-    //     this.pubnub.unsubscribe(channel, () => {
-    //         this.pubnub.publish(channel, message, () => {
-    //             this.pubnub.subscribe(channel);
-    //         })
-    //     }); 
-    // }
     
-
-    // publish({ channel, message }) {
-    //     this.subscriber.unsubscribe(channel, () => {
-    //         this.publisher.publish(channel, message, () => {
-    //             this.subscriber.susbscribe(channel)
-    //         });
-    //     });
-    // }
     broadcastChain() {
         this.publish({
             channel: CHANNELS.BLOCKCHAIN,
