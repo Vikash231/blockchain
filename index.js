@@ -1,9 +1,8 @@
 const express = require('express');
 const Blockchain = require('./blockchain');
 const bodyParser = require('body-parser');
-const PubSub = require('./pubsub');
+const PubSub = require('./app/pubsub');
 const request = require('request');
-// require('dotenv').config();
 
 const app = express();
 const blockchain = new Blockchain();
@@ -15,7 +14,6 @@ app.use(bodyParser.json());
 
 
 app.get('/api/blocks', (req,res) => {
-    // console.log("hi");
     res.json(blockchain.chain);
 });
 

@@ -1,6 +1,6 @@
 const PubNub = require('pubnub');
-const cryptoHash = require("./crypto-hash");
-const Blockchain = require("./blockchain");
+const cryptoHash = require("../util/crypto-hash");
+const Blockchain = require("../blockchain");
 
 const credentials = {
     publishKey: 'pub-c-8e4ac2f1-a9e5-44da-a09c-977d3f43a7a3',
