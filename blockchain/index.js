@@ -34,7 +34,6 @@ class Blockchain {
 
             if(Math.abs(lastDifficulty - difficulty) > 1) {
                 return false;                
-
             } 
 
             if(hash !== validateHash) {
@@ -45,7 +44,7 @@ class Blockchain {
         return true;
     }
     
-    replaceChain(chain) {
+    replaceChain(chain, onSuccess) {
         if(chain.length <= this.chain.length) {
             console.error('The incoming chain must be longer');
             return;
@@ -56,6 +55,7 @@ class Blockchain {
             return;
         }
 
+        if(onSuccess) onSuccess();
         console.log(chain);
         this.chain = chain;
     }
