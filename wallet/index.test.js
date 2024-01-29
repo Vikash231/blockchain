@@ -138,7 +138,7 @@ describe('Wallet', () => {
                 );
             });
 
-            it('and the wallet had made transaction', () => {
+            describe('and the wallet had made transaction', () => {
                 let recentTransaction;
 
                 beforeEach(() => {
@@ -191,7 +191,7 @@ describe('Wallet', () => {
                         nextBlockTransaction.outputMap[wallet.publicKey]
                       );
                     });
-                  });
+                });
             });
 
 
