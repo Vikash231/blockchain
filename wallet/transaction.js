@@ -44,6 +44,7 @@ class Transaction {
 
     static validTransaction(transaction) {
         const { input: {amount, address, signature} , outputMap} = transaction;
+
         const outputTotal = Object.values(outputMap).reduce((callback,count) => {
             return callback+count;
         });
@@ -63,8 +64,8 @@ class Transaction {
 
     static rewardTransaction({ minerWallet }) {
         return new this({
-            input: REWARD_INPUT,
-            outputMap: {[minerWallet.publicKey]: MINING_REWARD}
+          input: REWARD_INPUT,
+          outputMap: { [minerWallet.publicKey]: MINING_REWARD }
         });
     }
     
