@@ -20,7 +20,6 @@ class TransactionMiner {
         this.blockchain.addBlock({data: validTransactions});
 
         this.pubsub.broadcastChain();
-
         this.transactionPool.clear();
     }
 }

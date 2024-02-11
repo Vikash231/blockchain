@@ -1,4 +1,5 @@
 const PubNub = require('pubnub');
+const redis = require('redis');
 const cryptoHash = require("../util/crypto-hash");
 const Blockchain = require("../blockchain");
 
@@ -77,6 +78,7 @@ class PubSub {
             message: JSON.stringify(transaction)
         });
     }
+
 }
 
 
