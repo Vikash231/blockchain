@@ -1,4 +1,4 @@
-This is a blockchain created by me using **ReactJs**, **nodeJs**, **REST APIs** and **pubNub**.
+This is a blockchain created by me using **ReactJs**, **nodeJs**, **REST APIs** and **pubNub**.<br/>
 ##Project link (Loading might take few minutes because of free hosting):
 https://cryptochain-g3sd.onrender.com/
 
